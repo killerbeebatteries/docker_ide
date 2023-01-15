@@ -1,7 +1,10 @@
 # Docker image for Neovim and Tmux
 
 ## Build
+
+```
 docker -t local-nvim-ide .
+```
 
 ## Run
 
