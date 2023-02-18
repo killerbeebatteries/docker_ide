@@ -110,12 +110,6 @@ lspconfig["lua_ls"].setup({
   },
 })
 
--- configure bash server
-lspconfig["bashls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 -- configure ansible server
 lspconfig["ansiblels"].setup({
 	capabilities = capabilities,
@@ -128,38 +122,9 @@ lspconfig["terraformls"].setup({
 	on_attach = on_attach,
 })
 
--- configure dockerfile server
-lspconfig["dockerls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 -- configure groovy server
 lspconfig["groovyls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
--- configure golang server
-lspconfig["gopls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure ruby server
-lspconfig["ruby_ls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure json server
-lspconfig["jsonls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
--- configure yaml server
-lspconfig["yamlls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})

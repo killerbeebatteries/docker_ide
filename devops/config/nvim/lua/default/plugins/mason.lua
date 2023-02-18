@@ -29,15 +29,10 @@ mason_lspconfig.setup({
     "tailwindcss",
     "lua_ls",
     "emmet_ls",
-    "bashls",
     "ansiblels",
     "terraformls",
     "dockerls",
     "groovyls",
-    "gopls",
-    "ruby_ls",
-    "jsonls",
-    "yamlls",
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed
