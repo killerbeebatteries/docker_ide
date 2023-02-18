@@ -22,7 +22,9 @@ docker run -it --rm --volume="$(pwd)":/data local-devops-ide
 ```
 
 ## SSH Config
-With support for SSH
+With support for SSH:
+
+Generate and copy over a `config`, `known_hosts` and key-pairs into a custom directory, then mount that for our container to use.
 ```
 docker run -it --rm --volume="$(pwd)":/data --volume="~/.ssh/devops_ide":/home/tomatoesarefruit/.ssh local-devops-ide
 ```
@@ -36,7 +38,7 @@ docker run -it --rm --volume="$(pwd)":/data \
   local-devops-ide
 ```
 
-*NOTE:* When you first run `nvim` it will trigger the setup of the plugins. So you might have to open it and exit a couple of times before it's fully setup.
+__NOTE:__ When you first run `nvim` it will trigger the setup of the plugins. So you might have to open it and exit a couple of times before it's fully setup.
 
 ## Credits
 
