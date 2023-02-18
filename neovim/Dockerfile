@@ -12,6 +12,8 @@ RUN apt update && apt install -y \
   python3-pip \
   tmux \
   neovim \
+  nodejs \
+  npm \
   && rm -rf /var/lib/apt/lists/*
 
 # Create user

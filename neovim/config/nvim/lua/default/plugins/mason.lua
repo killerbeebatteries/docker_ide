@@ -29,6 +29,15 @@ mason_lspconfig.setup({
     "tailwindcss",
     "sumneko_lua",
     "emmet_ls",
+    "bash",
+    "ansible",
+    "terraform",
+    "dockerfile",
+    "groovy",
+    "nginx"
+    "ruby"
+    "json",
+    "yaml",
   },
   -- auto-install configured servers (with lspconfig)
   automatic_installation = true, -- not the same as ensure_installed
@@ -38,8 +47,13 @@ mason_null_ls.setup({
   -- list of formatters & linters for mason to install
   ensure_installed = {
     "prettier", -- ts/js formatter
-    "stylua", -- lua formatter
+    "stylua",   -- lua formatter
     "eslint_d", -- ts/js linter
+    "autopep8", -- python formatter
+    "jsonlint", -- json linter and formatter
+    "rubocop",  -- ruby linter
+    "jq",       -- json formatter
+    "yamlfmt",  -- yaml formatter
   },
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,
