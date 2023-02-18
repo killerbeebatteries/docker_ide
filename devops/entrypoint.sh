@@ -3,13 +3,19 @@
 set -u
 set -e
 
-# setup kubectl context
+GCLOUD_PROJECT=${GCLOUD_PROJECT:-}
+GKE_CLUSTER=${GKE_CLUSTER:-invalid_cluster_please_set_env_var}
+GKE_REGION=${GKE_REGION:-invalid_region_please_set_env_var}
 
-# setup shell prompt based on environment type
-if [ $ENV_TYPE = "prod" ]; then
-  export PS1="\e[0;31m[\u@\h \W]\$ \e[m "
-else
-  export PS1="\e[0;32m[\u@\h \W]\$ \e[m "
+# setup kubectl context
+if [ -n "${GCLOUD_PROJECT}" ]; then
+  gcloud container clusters get-credentials "${GKE_CLUSTER}" \
+    --region="${GKE_REGION}"
+fi
+
+# use our data directory
+if [ -d "/data" ]; then
+  cd /data
 fi
 
 exec "$@"

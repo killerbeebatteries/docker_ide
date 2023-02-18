@@ -21,6 +21,21 @@ Run the image labelled as 'local-devops-ide', in interactive mode (-i), allocati
 docker run -it --rm --volume="$(pwd)":/data local-devops-ide
 ```
 
+## SSH Config
+With support for SSH
+```
+docker run -it --rm --volume="$(pwd)":/data --volume="~/.ssh/devops_ide":/home/tomatoesarefruit/.ssh local-devops-ide
+```
+
+## GCloud Config
+```
+docker run -it --rm --volume="$(pwd)":/data \
+  --env GCLOUD_PROJECT=myproject \
+  --env GKE_CLUSTER=mycluster \ 
+  --env GKE_REGION=myregion \ 
+  local-devops-ide
+```
+
 *NOTE:* When you first run `nvim` it will trigger the setup of the plugins. So you might have to open it and exit a couple of times before it's fully setup.
 
 ## Credits

@@ -1,6 +1,6 @@
 FROM ubuntu:22.10
 
-ARG USERNAME=dodgethis
+ARG USERNAME=tomatoesarefruit
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
@@ -42,6 +42,7 @@ RUN apt update && apt install -y \
   kubectl \
   terraform \
   bash-completion \
+  shellcheck \
   && rm -rf /var/lib/apt/lists/*
 
 # Install npm packages for neovim
