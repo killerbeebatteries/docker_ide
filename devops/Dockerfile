@@ -28,6 +28,7 @@ RUN apt update && apt install -y \
   python3 \
   python3-pip \
   python3-virtualenv \
+  python3.10-venv \
   golang \
   ruby \
   rubygems \
@@ -45,8 +46,9 @@ RUN apt update && apt install -y \
   shellcheck \
   && rm -rf /var/lib/apt/lists/*
 
-# Install npm packages for neovim
+# Install packages for neovim lsp servers and linter/formatters
 RUN npm install -g tree-sitter-cli
+RUN gem install rubocop
 
 # Bash completion
 RUN kubectl completion bash | tee /etc/bash_completion.d/kubectl > /dev/null
