@@ -64,7 +64,7 @@ COPY entrypoint.sh /usr/bin/entrypoint.sh
 
 # Configure user env
 USER $USERNAME
-COPY config/tmux/tmux.conf $HOME/$USERNAM/.tmux.conf
+COPY config/tmux/tmux.conf /home/$USERNAME/.tmux.conf
 RUN mkdir -p /home/$USERNAME/.config/nvim
 COPY config/nvim/ /home/$USERNAME/.config/nvim/
 RUN mkdir /home/$USERNAME/.bashrc.d
