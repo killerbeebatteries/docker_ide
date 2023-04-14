@@ -42,6 +42,7 @@ RUN apt update && apt install -y \
   google-cloud-cli-gke-gcloud-auth-plugin \
   kubectl \
   terraform \
+  terraform-ls \
   bash-completion \
   shellcheck \
   && rm -rf /var/lib/apt/lists/*
